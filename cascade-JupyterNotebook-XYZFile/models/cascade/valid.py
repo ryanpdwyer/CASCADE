@@ -15,6 +15,6 @@ def validate_smiles(smiles):
     for a in mol.GetAtoms():
         if a.GetAtomicNum() not in allowed_atoms:
             return False
-        if a.GetFormalCharge() != 0:
-            return False
+        # if a.GetFormalCharge() != 0:
+        #     return False
     return True
