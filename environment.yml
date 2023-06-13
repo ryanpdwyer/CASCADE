@@ -4,11 +4,15 @@ channels:
   - rdkit
 
 dependencies:
-  - python=3.5
+  - python=3.6
   - rdkit=2018.03.03
+  - openbabel
+  - ipykernel
   - pip:
       - keras==2.2.5
       - tensorflow==1.12.0
       - tqdm==4.54.0
       - scipy==1.4.1
+      - h5py<3.0
+      - cctk
       - scikit-learn==0.22.2.post1
