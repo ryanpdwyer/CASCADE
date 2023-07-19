@@ -30,6 +30,12 @@ from nfp.layers import (MessageLayer, GRUStep, Squeeze, EdgeNetwork,
                                ReduceBondToPro, ReduceBondToAtom,
                                GatherAtomToBond, ReduceAtomToPro)
 from nfp.models import GraphModel
+from os import path
+
+_dir = path.dirname(path.abspath(__file__))
+
+_modelpath_C = os.path.join(_dir, 'trained_model', 'best_model.hdf5')
+_modelpath_H = os.path.join(_dir, 'trained_model', 'best_model_H_DFTNN.hdf5')
 
 def to_C(atom):
     neighbors = [x.GetAtomicNum() for x in atom.GetNeighbors()]
